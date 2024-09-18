@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--titlu tab-->
+    <title>Leave a Comment</title>
+    <!--imagine tab-->
+    <link rel="icon" href="../imagini/movie-solid-24.png" type="image/x-icon" />
+    <!--link catre css-->
+    <link rel="stylesheet" href="comments.css" />
+  </head>
+
+  <body>
+    <div class="comm-box">
+      <img
+        src="../imagini/arrow_left.png"
+        onclick="location.href= '../index.php' "
+      />
+      <p>Leave a Comment:</p>
+      <form class="comm-form">
+        <input type="text" placeholder="Username" required />
+        <input type="text" placeholder="Movie" required />
+        <input type="number" placeholder="Grade" required />
+        <textarea cols="20" rows="10" placeholder="Recenzie"></textarea>
+        <button type="submit">Post Comment!</button>
+      </form>
+    </div>
+  </body>
+</html>

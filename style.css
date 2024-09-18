@@ -1,0 +1,522 @@
+/*link pentru syle-ul scrisului*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+/*Detalii body*/
+body {
+  min-height: 100vh;
+  background: #212529;
+}
+/*Detalii bara navigare*/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  height: 80px;
+  padding: 10px 50px;
+  background-color: #212529;
+  z-index: 9999;
+}
+
+.navbar h2 {
+  color: #48cfad;
+  font-size: 30px;
+}
+
+.navbar h4 {
+  color: #48cfad;
+  font-size: 15px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  margin-right: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li:hover a {
+  color: #48cfad;
+}
+
+.navbar ul li:last-child a {
+  margin: 0;
+}
+/*detalii butoane */
+.bttn {
+  background: #48cfad;
+  padding: 6px 15px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.bttn:hover {
+  background: #25a081;
+}
+
+.logout_bttn {
+  display: flex;
+  gap: 10px;
+}
+/*Detalii sectiune HOME*/
+.home {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.home h3 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.home .box {
+  background-color: #212529;
+  width: 600px;
+  border: 5px solid #48cfad;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home .box p {
+  color: #fff;
+}
+/*detalii slider pentru sectiune home*/
+.home img {
+  vertical-align: middle;
+}
+
+.home .slider {
+  width: 1000px;
+  height: 550px;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.home .container .bttn {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.home .container:hover .slider {
+  opacity: 0.6;
+}
+
+.home .container:hover .bttn {
+  opacity: 0.9;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.home .container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.home .mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.home .cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.home .prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.home .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.home .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.home .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.home .caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.home .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.home .column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.home .demo {
+  opacity: 0.6;
+}
+
+.home .active,
+.demo:hover {
+  opacity: 1;
+}
+/*Detalii sectiune movies*/
+.movies {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.movies h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-top: 80px;
+}
+/*Template general linie*/
+.movies .linie_film {
+  border: none;
+  border-top: 3px dashed #48cfad;
+  height: 5px;
+  width: 80%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+/*Detalii primul film*/
+.film1 {
+  display: flex;
+  justify-content: space space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 50px;
+  margin-top: 10px;
+}
+
+.film1 img {
+  width: 250px;
+  margin-left: 50px;
+}
+
+.film1 .info1 h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.film1 .info1 p {
+  color: #ccc;
+  font-size: 17px;
+}
+
+.film1 .info1 h4 {
+  color: #ccc;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.film1 .info1 button {
+  margin-top: 20px;
+}
+
+.film1 .info1 .butoane {
+  display: flex;
+  gap: 10px;
+}
+
+/*Detalii al doilea film*/
+.film2 {
+  display: flex;
+  justify-content: space space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 50px;
+  margin-top: 10px;
+}
+
+.film2 img {
+  width: 250px;
+  margin-left: 50px;
+}
+
+.film2 .info2 h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.film2 .info2 p {
+  color: #ccc;
+  font-size: 17px;
+}
+
+.film2 .info2 h4 {
+  color: #ccc;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.film2 .info2 button {
+  margin-top: 20px;
+}
+
+.film2 .info2 .butoane {
+  display: flex;
+  gap: 10px;
+}
+
+/*Detalii al treilea film*/
+.film3 {
+  display: flex;
+  justify-content: space space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 50px;
+  margin-top: 10px;
+}
+
+.film3 img {
+  width: 250px;
+  margin-left: 50px;
+}
+
+.film3 .info3 h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.film3 .info3 p {
+  color: #ccc;
+  font-size: 17px;
+}
+
+.film3 .info3 h4 {
+  color: #ccc;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.film3 .info3 button {
+  margin-top: 20px;
+}
+
+.film3 .info3 .butoane {
+  display: flex;
+  gap: 10px;
+}
+
+/*Detalii al patrulea film*/
+.film4 {
+  display: flex;
+  justify-content: space space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 50px;
+  margin-top: 10px;
+}
+
+.film4 img {
+  width: 250px;
+  margin-left: 50px;
+}
+
+.film4 .info4 h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.film4 .info4 p {
+  color: #ccc;
+  font-size: 17px;
+}
+
+.film4 .info4 h4 {
+  color: #ccc;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.film4 .info4 button {
+  margin-top: 20px;
+}
+
+.film4 .info4 .butoane {
+  display: flex;
+  gap: 10px;
+}
+
+/*Detalii al patrulea film*/
+.film5 {
+  display: flex;
+  justify-content: space space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 50px;
+  margin-top: 10px;
+}
+
+.film5 img {
+  width: 250px;
+  margin-left: 50px;
+}
+
+.film5 .info5 h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.film5 .info5 p {
+  color: #ccc;
+  font-size: 17px;
+}
+
+.film5 .info5 h4 {
+  color: #ccc;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.film5 .info5 button {
+  margin-top: 20px;
+}
+
+.film5 .info5 .butoane {
+  display: flex;
+  gap: 10px;
+}
+
+/*detalii div comments*/
+.comments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comments h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-top: 80px;
+}
+
+/*detalii div coming soon*/
+.soon {
+  display: flex;
+  justify-content: space;
+  align-items: center;
+  gap: 25px;
+  padding: 0 50px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.coming_soon h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-top: 80px;
+}
+
+.coming_soon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/*detalii page footer*/
+footer {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #25a081;
+}
+
+footer .copyright {
+  color: #eaf6f6;
+  font-size: 12px;
+  padding: 5px 0;
+}
